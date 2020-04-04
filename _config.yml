@@ -4,18 +4,19 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: DS Blog
+subtitle: Less is more.
+description: Less is more.
+author: ds19991999
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: zh-Hans
 date_format: '%Y-%m-%d'
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url:
-baseurl:
+url: https://blog.creat.kim
+# baseurl: blog.creat.kim
 permalink: pretty
 
 # Pagination
@@ -32,7 +33,7 @@ paginate: 10
   #paginate_path: "/page:num/"
 
 # Handling Reading
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock", "README_en.md", "vendor"]
+# exclude: ["README.md"]
 
 # Separator
 #excerpt_separator: <!-- more -->
@@ -42,6 +43,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 highlighter: rouge
 highlight:
   line_number: true
+  auto_detect: true
 
 #### Markdown Processors
 ## 'redcarpet' is unsupported on GitHub Pages now.
@@ -70,13 +72,15 @@ plugins:
  - jemoji
  - jekyll-sitemap
  - jekyll-feed
+ # 将页面和帖子翻译成多种语言
+ - jekyll-language-plugin
 
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `assets/` directory.
-favicon: /assets/favicon.ico
+favicon: /assets/favicon.png
 
 # Set default keywords (Use a comma to separate)
 keywords: "Jekyll, NexT"
@@ -87,13 +91,13 @@ keywords: "Jekyll, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2018
 
 # icon between year and author @Footer
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -105,11 +109,11 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in jekyll config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -118,10 +122,19 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
-  archives: /archives/
-  tags: /tags/
+  about: /pages/about/
+  resume: /resume/
+  archives: /pages/archives/
+  categories: /pages/categories/
+  tags: /pages/tags/
+  top: /pages/top/
+  message: /pages/message/
+  book: /pages/book/
+  file: https://onedrive.creat.kim
+  note: /note/
+  ariang: https://aria2.ml
+  myseo: /myseo/
+
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -136,24 +149,30 @@ menu_icons:
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
+  book: book
+  note: pencil
   categories: th
   schedule: calendar
   tags: tags
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
-
-
-
+  myseo: internet-explorer
+  top: signal
+  resume: handshake-o
+  message: commenting
+  friends: link
+  file: file-archive-o
+  ariang: cloud-download
 
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -174,13 +193,13 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: Monda
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
 
   # Font settings for posts
   # Fallback to `global` font settings.
@@ -199,7 +218,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
     size:
 
 
@@ -213,9 +232,16 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
-
+social:
+  CSDN: https://blog.csdn.net/ds19991999
+  GitHub: https://github.com/ds19991999
+  Email: mailto:cva.engineer.ding@gmail.com
+  Facebook: https://www.facebook.com/ds19991999
+  Twitch: https://www.twitch.tv/ds19991999
+  Twitter: https://twitter.com/ds19991999
+  YouTube: https://www.youtube.com/channel/UC_tUpZ-kfsNuiW5VoMMGCPw/featured
+  Spotify: https://soundsgood.co/curator/ds19991999
+  
 
 # Social Links Icons
 # Icon Mapping:
@@ -226,14 +252,22 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
+  # http://www.fontawesome.com.cn/cheatsheet/
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  CSDN: angellist
+  Facebook: facebook
+  Email: envelope-o 
+  YouTube: youtube-play
+  Spotify: spotify
+  Twitch: twitch
+  Music: music
 
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -250,7 +284,7 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
+creative_commons: by-nc-sa
 #creative_commons:
 
 
@@ -264,9 +298,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -277,15 +311,19 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: false
+  scrollpercent: true
 
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: 友链
+#布局，一行一个连接
+links_layout: block 
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  帅导航: https://blog.creat.kim/myseo/
+  幻凡ss: https://hfanss.com
+  Searx: https://creat.kim
+  Telegram: https://t.me/baba2333
 
 
 # ---------------------------------------------------------------
@@ -296,7 +334,7 @@ sidebar:
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
+save_scroll: true
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -304,34 +342,40 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 50
 
 # Post meta display settings
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
-
+  
 # Post wordcount display settings
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  #字数统计
+  wordcount: true
+  #预览时间
+  min2read: true
+  ##总字数,显示在页面底部--无效
+  # totalcount: true
   separated_meta: true
 
 # Wechat Subscriber
 #wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
+#  enabled: true
+#  qcode: /assets/images/weipayimg.png
+#  description: 意思意思？
+reward_comment: 意思意思？
+wechatpay: /assets/images/weipayimg.png
+alipay: /assets/images/alipayimg.jpg
 # Declare license on posts
 post_copyright:
-  enable: false
-  license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  enable: true
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
 
@@ -361,109 +405,100 @@ highlight_theme: normal
 # ---------------------------------------------------------------
 
 # MathJax Support
-mathjax:
-  enable: false
-  per_page: false
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+#mathjax:
+#  enable: true
+#  per_page: true
+#  cdn地址已经废弃
+#  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: false
+han: true
 
 # Swiftype Search API Key
-#swiftype_key:
+# swiftype_key: tNfPWjcjXLWDXy-9pE9H
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: c72906569503c06a12a6edc7b7c66149
 
 # Duoshuo ShortName
 #duoshuo_shortname:
 
 # Disqus
-disqus:
-  enable: false
-  shortname:
-  count: true
+# 多说评论已经关闭
+#disqus:
+#  enable: false
+#  shortname:
+#  count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
-  hide: false
+#  hide: false
 
-# <wildfire>
-wildfire:
-  enable: false
-  # version - It's recommended to use the following versions.
-  loaderVersion: 1.2.5 # https://www.npmjs.com/package/wildfire-comment
-  useDev: true
-  version: 0.5.6 
-  # database config
-  databaseProvider: firebase # or wilddog
-  firebase: # your firebase config goes here ↓
-    apiKey: 
-    authDomain:
-    databaseURL:
-    projectId:
-    storageBucket:
-    messagingSenderId:
-  wilddog: # your wilddog config goes here ↓
-    siteId:
-  # other configs
-  theme: light # or dark
-  locale: en # or other locales, e.g. zh-CN
-  defaultAvatarURL: 
-# Any question? 
-# Raise an issue here: https://github.com/cheng-kang/wildfire/issues
-# </wildfire>
-
+# 只能用google账号登录
 # Hypercomments
 #hypercomments_id:
 
+# 网易云跟帖关闭
 # Gentie productKey
 #gentie_productKey:
 
 # changyan
+# 畅言的注册站点要备案
 changyan:
   enable: false
   appid:
   appkey:
 
+# 友言网站废弃
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
 
+# 来必力访问太慢
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zODYzOS8xNTE2Nw==
 
 # Support for gitalk comments system.
+# 这个不错，使用github的issue进行评论
+# 但是只能使用github账号登录
 gitalk:
   enable: false
-  clientID: # 54730ddf7b9420460c03
-  clientSecret: # c05684701b25ff1c19ea0c01ce4d80c125e0707d
-  repo: # colingpt.github.io
-  owner: # colingpt
-  admin: # colingpt
+  clientID: f81a898cf980f229b9e1
+  clientSecret: a0476f8904c6c9ccba39b0e6926f93185e41d4e3
+  repo: ds19991999.github.io
+  owner: ds19991999
+  admin: ds19991999
 
+# 百度分享不支持https，但可以自行下载源码
+# 之后直接按照官网给的代码安装就OK了
+# 主要是支持侧边栏按钮分享，不错
 # Baidu Share
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+# baidushare: true
+  #type: button
+  #baidushare: true
 
+# 无法访问官网
 # Share
-#jiathis:
-# Warning: JiaThis does not support https.
-#add_this_id:
-
+#jiathis: true
+#add_this_id: ra-5b67f7b9acdf9bee
 # Share
-#duoshuo_share: true
+# duoshuo_share: true
 
+# 没啥用
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
+# 可以直接安装代码，不需要配置
 # Google Analytics
-#google_analytics:
+google_analytics: UA-123686345-1
+# 百度分析ID
+# baidu_analytics: e0f7e2879e5634cc0f587da6721b6860
 
+# 俄罗斯的一家搜索引擎公司
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
 #yandex_site_verification:
@@ -475,14 +510,15 @@ gitalk:
 # See https://azure.microsoft.com/en-us/services/application-insights/
 # application_insights:
 
+# 多说关闭
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+#duoshuo_info:
+#  ua_enable: true
+#  admin_enable: false
+#  user_id: 0
+#  #admin_nickname: Author
 
 
 # Facebook SDK Support.
@@ -503,6 +539,7 @@ facebook_comments_plugin:
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
 
+# 俄罗斯的社群服务网站
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
 vkontakte_api:
@@ -515,17 +552,17 @@ vkontakte_api:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: false
-  id:     #<app_id>
+  enable: true
+  id: 13049
   color:  fc6423
 
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: dWvyT26drR1HLxgXvGD7Iw7u-gzGzoHsz
+  app_key: 3jKYv5jwUQdUe8DwXIDM54Xb
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -534,15 +571,16 @@ busuanzi_count:
   enable: false
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_header: <i class="fa fa-user"></i>小站访问人数
   site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_header: <i class="fa fa-eye"></i>累计总访问量
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  # 这个和leancloud冲突了
+  page_pv: false
+  page_pv_header: <i class="fa fa-file-o"></i>累计阅读量
   page_pv_footer:
 
 
@@ -554,7 +592,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -562,14 +600,14 @@ baidu_push: false
 # API Documentation:
 # https://developers.google.com/google-apps/calendar/v3/reference/events/list
 calendar:
-  enable: false
-  calendar_id: <required>
-  api_key: <required>
+  enable: true
+  calendar_id: 510249671790-amhf5dd2br1532otlqd1mb83knumuohe.apps.googleusercontent.com
+  api_key: AIzaSyB09TEoFyyc2SVBI23YKfNe5AI2CQlqJK8
   orderBy: startTime
   offsetMax: 24
   offsetMin: 4
   timeZone:
-  showDeleted: false
+  showDeleted: true
   singleEvents: true
   maxResults: 250
 
@@ -583,10 +621,10 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
+# 使用这个本地站内搜索就够了
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -596,7 +634,7 @@ local_search:
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
-exturl: false
+exturl: true
 
 
 #! ---------------------------------------------------------------
@@ -661,9 +699,10 @@ vendors:
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
+  #fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js
+  #fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css
   fancybox:
   fancybox_css:
-
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
   fastclick:
@@ -736,3 +775,6 @@ images: assets/images
 
 # Theme version
 version: 5.1.1
+
+footer:
+  icon: heart

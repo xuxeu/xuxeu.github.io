@@ -30,9 +30,11 @@
 
       <section class="site-overview sidebar-panel{% unless display_toc and toc.size > 1 %} sidebar-panel-active{% endunless %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<a href="/">
           <img class="site-author-image" itemprop="image"
                src="{% assign default_avatar = site.images | append: '/avatar.gif' %}{{ site.avatar | default: default_avatar | relative_url }}"
                alt="{{ site.author }}" />
+		</a>
           <p class="site-author-name" itemprop="name">{{ site.author }}</p>
            {% if site.seo %}
               <p class="site-description motion-element" itemprop="description">{{ site.signature }}</p>
@@ -122,7 +124,7 @@
         {% if site.links %}
           <div class="links-of-blogroll motion-element {{ 'links-of-blogroll-' | append: site.links_layout | default: 'inline' }}">
             <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-{{ site.links_icon | default: 'globe' | downcase }}"></i>
+              <i class="fa  fa-fw fa-{{ site.links_icon | default: 'link' | downcase }}"></i>
               {{ site.links_title }}
             </div>
             <ul class="links-of-blogroll-list">
@@ -130,14 +132,14 @@
                 {% assign name = name_link[0] %}
                 {% assign link = name_link[1] %}
                 <li class="links-of-blogroll-item">
-                  <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>
+                  <a href="{{ link }}" title="{{ name }}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i>  {{ name }}</a>
                 </li>
               {% endfor %}
             </ul>
+			{% include _custom/sidebar.html %}
           </div>
         {% endif %}
 
-        {% include _custom/sidebar.html %}
 
       </section>
 

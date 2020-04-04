@@ -1,7 +1,7 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: $main-desktop;
+  width: 90%;
 
   @include tablet() {
     width: auto;
@@ -47,7 +47,7 @@
 }
 
 .container .main-inner {
-  width: $main-desktop;
+  width: 90%;
 
   @include tablet() {
     width: auto;
@@ -61,8 +61,8 @@
   float: right;
   box-sizing: border-box;
   padding: $content-desktop-padding;
-  width: $content-desktop;
-  background: white;
+  width: calc(100% - 260px);
+  background: rgba(255,255,255,0.8);
   min-height: 700px;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
@@ -127,3 +127,6 @@
     padding-right: 260px;
   }
 }
+
+
+.list-title a,.widget.like_most_img ul li a,.widget.hot_post_img ul li a,.widget.recent_comments ul li a,.widget.hot_comment ul li a{position:relative;}

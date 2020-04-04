@@ -20,6 +20,15 @@ menu:
   schedule: 日程表
   sitemap: 站点地图
   commonweal: 公益404
+  myseo: 导航
+  book: 书单
+  friends: 友链
+  top: TopX
+  resume: 简历
+  message: 留言
+  file: 资源
+  ariang: 下载
+  note: 笔记
 
 sidebar:
   overview: 站点概览
@@ -34,7 +43,7 @@ post:
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 此文章未包含目录
-  visitors: 阅读次数
+  visitors: 热度
   wordcount: 字数统计
   min2read: 阅读时长
   copyright:
@@ -85,7 +94,7 @@ cheers:
   great: 非常好
   excellent: 太棒了
 
-keep_on: 继续努力。
+keep_on: 继续努力！
 
 symbol:
   comma: '， '

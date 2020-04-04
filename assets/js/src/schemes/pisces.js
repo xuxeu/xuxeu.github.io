@@ -15,3 +15,13 @@ $(document).ready(function () {
     }
   });
 });
+
+
+/* 文章标题平移效果*/
+jQuery(document).ready(function($){
+$('.list-title a ,.entry-title a,.nav-single a,.widget ul li a').hover(function() {
+$(this).stop().animate({'left': '10px'}, 'fast');
+}, function() {
+$(this).stop().animate({'left': '0px'}, 'fast');
+});
+});
