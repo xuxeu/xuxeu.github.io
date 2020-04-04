@@ -42,20 +42,20 @@ $font-family: {{ font }};
 @import "pooleparty/__inline/message";
 @import "pooleparty/__inline/pagination";
 
-@import "hydejack/__inline/base";
-@import "hydejack/__inline/sidebar";
-@import "hydejack/__inline/social";
-@import "hydejack/__inline/menu";
-@import "hydejack/__inline/content";
-@import "hydejack/__inline/avatar";
-@import "hydejack/__inline/katex";
-@import "hydejack/__inline/footer";
+@import "编程随想/__inline/base";
+@import "编程随想/__inline/sidebar";
+@import "编程随想/__inline/social";
+@import "编程随想/__inline/menu";
+@import "编程随想/__inline/content";
+@import "编程随想/__inline/avatar";
+@import "编程随想/__inline/katex";
+@import "编程随想/__inline/footer";
 
-// {% unless site.hydejack.no_mark_external or site.no_mark_external %}
-//   @import "hydejack/__link/mark-external";
+// {% unless site.编程随想.no_mark_external or site.no_mark_external %}
+//   @import "编程随想/__link/mark-external";
 // {% endunless %}
-// {% unless site.hydejack.no_break_layout %}
-//   @import "hydejack/__link/break-layout";
+// {% unless site.编程随想.no_break_layout %}
+//   @import "编程随想/__link/break-layout";
 // {% endunless %}
 
 // @import "syntax";
@@ -64,7 +64,7 @@ $font-family: {{ font }};
 @import "my-inline";
 // @import "my-style";
 
-{% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
+{% unless site.编程随想.no_google_fonts or site.no_google_fonts %}
   {% assign font = font | split:',' | shift | join:',' %}
   {% assign font_heading = font_heading | split:',' | shift | join:',' %}
 {% endunless %}

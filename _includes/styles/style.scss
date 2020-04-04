@@ -30,7 +30,7 @@ $font-family: {{ font }};
 
 @import "reboot-mod";
 
-{% unless site.hydejack.no_inline_css or jekyll.environment == 'development' %}
+{% unless site.编程随想.no_inline_css or jekyll.environment == 'development' %}
   @import "pooleparty/__link/base";
   @import "pooleparty/__link/type";
   @import "pooleparty/__link/table";
@@ -42,20 +42,20 @@ $font-family: {{ font }};
   @import "pooleparty/__link/message";
   @import "pooleparty/__link/pagination";
 
-  @import "hydejack/__link/base";
-  @import "hydejack/__link/sidebar";
-  @import "hydejack/__link/social";
-  @import "hydejack/__link/menu";
-  @import "hydejack/__link/content";
-  @import "hydejack/__link/avatar";
-  @import "hydejack/__link/katex";
-  @import "hydejack/__link/footer";
+  @import "编程随想/__link/base";
+  @import "编程随想/__link/sidebar";
+  @import "编程随想/__link/social";
+  @import "编程随想/__link/menu";
+  @import "编程随想/__link/content";
+  @import "编程随想/__link/avatar";
+  @import "编程随想/__link/katex";
+  @import "编程随想/__link/footer";
 
-  {% unless site.hydejack.no_mark_external or site.no_mark_external %}
-    @import "hydejack/__link/mark-external";
+  {% unless site.编程随想.no_mark_external or site.no_mark_external %}
+    @import "编程随想/__link/mark-external";
   {% endunless %}
-  {% unless site.hydejack.no_break_layout %}
-    @import "hydejack/__link/break-layout";
+  {% unless site.编程随想.no_break_layout %}
+    @import "编程随想/__link/break-layout";
   {% endunless %}
 
   @import "syntax";
@@ -64,7 +64,7 @@ $font-family: {{ font }};
   // @import "my-inline";
   @import "my-style";
 
-  {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
+  {% unless site.编程随想.no_google_fonts or site.no_google_fonts %}
     .wf-active {
       font-family: {{ font }};
 
@@ -85,20 +85,20 @@ $font-family: {{ font }};
   @import "pooleparty/_message.pre.scss";
   @import "pooleparty/_pagination.pre.scss";
 
-  @import "hydejack/_base.pre.scss";
-  @import "hydejack/_sidebar.pre.scss";
-  @import "hydejack/_social.pre.scss";
-  @import "hydejack/_menu.pre.scss";
-  @import "hydejack/_content.pre.scss";
-  @import "hydejack/_avatar.pre.scss";
-  @import "hydejack/_katex.pre.scss";
-  @import "hydejack/_footer.pre.scss";
+  @import "编程随想/_base.pre.scss";
+  @import "编程随想/_sidebar.pre.scss";
+  @import "编程随想/_social.pre.scss";
+  @import "编程随想/_menu.pre.scss";
+  @import "编程随想/_content.pre.scss";
+  @import "编程随想/_avatar.pre.scss";
+  @import "编程随想/_katex.pre.scss";
+  @import "编程随想/_footer.pre.scss";
 
-  {% unless site.hydejack.no_mark_external or site.no_mark_external %}
-    @import "hydejack/_mark-external.pre.scss";
+  {% unless site.编程随想.no_mark_external or site.no_mark_external %}
+    @import "编程随想/_mark-external.pre.scss";
   {% endunless %}
-  {% unless site.hydejack.no_break_layout %}
-    @import "hydejack/_break-layout.pre.scss";
+  {% unless site.编程随想.no_break_layout %}
+    @import "编程随想/_break-layout.pre.scss";
   {% endunless %}
 
   @import "syntax";

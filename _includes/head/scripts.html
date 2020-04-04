@@ -1,7 +1,7 @@
 <script>
   {% include scripts/load-js-deferred.min.js %}{% include scripts/loadCSS.min.js %}{% include scripts/cssrelpreload.min.js %}
-  window._noPushState = {{ site.hydejack.no_push_state | default:site.disable_push_state | default:false }};
-  window._noDrawer = {{ site.hydejack.no_drawer | default:site.disable_drawer | default:false }};
+  window._noPushState = {{ site.编程随想.no_push_state | default:site.disable_push_state | default:false }};
+  window._noDrawer = {{ site.编程随想.no_drawer | default:site.disable_drawer | default:false }};
 </script>
 
 <!--[if gt IE 8]><!---->
@@ -9,7 +9,7 @@
 {% capture icons_url %}{% link assets/icomoon/style.css %}{% endcapture %}
 <script>
   WebFontConfig = {
-    {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
+    {% unless site.编程随想.no_google_fonts or site.no_google_fonts %}
     google: {
       families: ['{{ google_fonts | split:"|" | join:"','" }}']
     },
@@ -32,7 +32,7 @@
   {% assign font_heading = site.font_heading | default:"'Roboto Slab', Helvetica, Arial, sans-serif" %}
   {% assign font         = site.font         | default:"'Noto Sans', Helvetica, Arial, sans-serif" %}
 
-  {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
+  {% unless site.编程随想.no_google_fonts or site.no_google_fonts %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ google_fonts | uri_escape }}">
     <style>
       html { font-family: {{ font }} }

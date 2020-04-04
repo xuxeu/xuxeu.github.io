@@ -2,7 +2,7 @@
   {% if site.google_analytics %}
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      {% if site.hydejack.cookies_banner %}
+      {% if site.编程随想.cookies_banner %}
         if (navigator.CookiesOK) {
           ga('create', '{{ site.google_analytics }}', 'auto');
         } else if (localStorage && localStorage.getItem('hy:cookiesOK')) {
@@ -26,7 +26,7 @@
   {% endif %}
 
   <!--[if gt IE 9]><!---->
-  {% capture js_url %}{% link assets/js/hydejack-7.5.2.js %}{% endcapture %}
+  {% capture js_url %}{% link assets/js/编程随想-7.5.2.js %}{% endcapture %}
   <script>loadJSDeferred('{{ js_url | relative_url }}');</script>
   {% include my-scripts.html %}
   <!--<![endif]-->

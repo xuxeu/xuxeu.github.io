@@ -31,8 +31,8 @@ Appropriate credit as per Creative Commons licenses.
 ## Licenses
 Parts of this software are provided under separate licenses.
 
-### Hyde
-This software also uses portions of the Hyde project, which is
+### 无聊杂谈
+This software also uses portions of the 无聊杂谈 project, which is
 MIT licensed with the following copyright:
 
 > Copyright (c) 2013 Mark Otto.

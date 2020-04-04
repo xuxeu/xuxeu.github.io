@@ -4,7 +4,7 @@ title: PRO License
 ---
 
 ## License Summary
-* License concerns use of [Hydejack PRO][1]
+* License concerns use of [编程随想 PRO][1]
 * License does not expire
 * Commercial use allowed
 * Can modify source code
@@ -15,7 +15,7 @@ title: PRO License
 This Agreement governs the relationship between you (hereinafter: Licensee) and
 Florian Klampfer qwtel.com (hereinafter: Licensor).
 This Agreement sets the terms, rights, restrictions and obligations on using
-Hydejack PRO (hereinafter: The Software)
+编程随想 PRO (hereinafter: The Software)
 created and owned by Licensor, as detailed herein.
 
 ### 2. License Grant
@@ -137,4 +137,4 @@ Licensee hereby agrees not to initiate class-action lawsuits against Licensor in
 relation to this license and to compensate Licensor for any legal fees, cost or attorney fees should any claim
 brought by Licensee against Licensor be denied, in part or in full.
 
-[1]: https://qwtel.com/hydejack/
+[1]: https://qwtel.com/编程随想/

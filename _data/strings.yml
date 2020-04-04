@@ -37,7 +37,7 @@ continue_reading:      >
 
 cookies_banner:
   text:                >
-    This site uses cookies. [Cookies Policy](/hydejack/cookies-policy/).
+    This site uses cookies. [Cookies Policy](/编程随想/cookies-policy/).
   okay:                Okay
 
 not_found:
@@ -76,7 +76,7 @@ date_formats:
 
 # PRO Version
 # ---------------------------------------------------------------------------------------
-# If you don't own the PRO version of Hydejack, modifying these will have no effect.
+# If you don't own the PRO version of 编程随想, modifying these will have no effect.
 
 tinyletter:
   title:               Newsletter

@@ -63,11 +63,11 @@ Dec 18 2017
 
 
 ### Fixed
-* Fixed a bug that caused `<sup>` tags to render as regular text ([#52](https://github.com/qwtel/hydejack/pull/52))
-* Fixed a bug that caused Disqus to load the same thread on all pages ([#53](https://github.com/qwtel/hydejack/pull/52))
+* Fixed a bug that caused `<sup>` tags to render as regular text ([#52](https://github.com/qwtel/编程随想/pull/52))
+* Fixed a bug that caused Disqus to load the same thread on all pages ([#53](https://github.com/qwtel/编程随想/pull/52))
 * Fixed a bug that prevented Disqus comments to be loaded on sites that didn't cause scroll events
 * Fixed a bug that caused Disqus to be loaded over HTTP instead of HTTPS.
-* Fixed a bug that caused an extra space in URLs ([#55](https://github.com/qwtel/hydejack/pull/55)).
+* Fixed a bug that caused an extra space in URLs ([#55](https://github.com/qwtel/编程随想/pull/55)).
 * Comments no longer show up in the print version of the page.
 
 ### Other
@@ -112,7 +112,7 @@ Nov 25 2017
 
   ~~~yml
   # file: _config.yml
-  hydejack:
+  编程随想:
     cookies_banner: true
   ~~~
 
@@ -199,7 +199,7 @@ Nov 2 2017
 * Upgraded `jekyll-relative-links` to v5.0.1
 
 ### Fixes
-* `font` and `font_heading` are now properly set when using the `no_inline_css` option [#47](https://github.com/qwtel/hydejack/issues/47).
+* `font` and `font_heading` are now properly set when using the `no_inline_css` option [#47](https://github.com/qwtel/编程随想/issues/47).
 * Fixed default values for `image` and `logo` that were referring to non-existing images.
 * Added missing JS dev dependencies.
 
@@ -212,7 +212,7 @@ Oct 27 2017
 {:.heading.post-date}
 
 ### Fixes
-* Removed readme files from `assets` that would show up as pages when building on GitHub Pages [#42](https://github.com/qwtel/hydejack/issues/42).
+* Removed readme files from `assets` that would show up as pages when building on GitHub Pages [#42](https://github.com/qwtel/编程随想/issues/42).
 * Disabled push state on Firefox for iOS
 * Changed some default settings in `_config.yml`
 
@@ -227,15 +227,15 @@ Oct 24 2017
 {:.heading.post-date}
 
 ### License Change
-The *free version* of Hydejack is now [GPL-3.0] licensed, which is a more restrictive license than MIT (but still *Open Source*).
-This was necessary because the two major components that make up Hydejack,
+The *free version* of 编程随想 is now [GPL-3.0] licensed, which is a more restrictive license than MIT (but still *Open Source*).
+This was necessary because the two major components that make up 编程随想,
 [hy-push-state](https://qwtel.com/hy-push-state/){:.external} and
 [hy-drawer](https://qwtel.com/hy-drawer/){:.external},
 are now GPL licensed in turn.
 
 How will this affect you?
 * If you bought the *PRO version* you are not affected at all.
-* You can continue to use previous versions of Hydejack according to their license (MIT).
+* You can continue to use previous versions of 编程随想 according to their license (MIT).
 * If you upgrade, keep the source code in a public repository and make sure you include the new `LICENSE.md` file.
   DO NOT publish the *new code* with an *old license*.
 * If you upgrade and make changes to the source code, you are required to make those changes available to the public
@@ -275,11 +275,11 @@ That being said, you should be aware of these (small) breaking changes:
 
 * `color` has been renamed to `accent_color` to be consistent with the new `accent_image` key, but `color` continues to work.
 
-* Various options that do not make sense outside the context of Hydejack (like `no_push_state` or `no_drawer`)
-  have been moved under a common `hydejack` key. However, the old options continue to work.
+* Various options that do not make sense outside the context of 编程随想 (like `no_push_state` or `no_drawer`)
+  have been moved under a common `编程随想` key. However, the old options continue to work.
 
   ```yml
-  hydejack:
+  编程随想:
     no_push_state: false
     no_drawer: false
   ```
@@ -320,7 +320,7 @@ That being said, you should be aware of these (small) breaking changes:
 
 * All texts that were previously hard-coded into the theme can now be configured via `_data/strings.yml`.
   This makes it possible to change certain phases without having to change source files,
-  but it should also make it easier to use Hydejack with other languages.
+  but it should also make it easier to use 编程随想 with other languages.
   Time and date formats can also be configured, using Ruby's
   [format directives](http://ruby-doc.org/core-2.4.1/Time.html#method-i-strftime).
 
@@ -333,7 +333,7 @@ That being said, you should be aware of these (small) breaking changes:
   * Added `ieconfig.xml` for "Pin to start menu" support in Windows 10.
   * Old icons and new ones are now located in `assets/icons`.
 
-* Hydejack now marks up content as *structured data*, to the extent possible.
+* 编程随想 now marks up content as *structured data*, to the extent possible.
   The resume is provided as <https://schema.org/Person>
   as well as [hCard](http://microformats.org/wiki/hcard),
   while projects are provided as <https://schema.org/CreativeWork>.
@@ -342,7 +342,7 @@ That being said, you should be aware of these (small) breaking changes:
   If you do not want to expose your data in machine-readable form, you can set the `no_structured_data` flag to `true` in your config file.
 
   ```yml
-  hydejack:
+  编程随想:
     no_structured_data: true
   ```
 
@@ -403,11 +403,11 @@ That being said, you should be aware of these (small) breaking changes:
   to generate a redirect page, but this is optional.
 
 * You can now configure the order of complementary content below posts and projects.
-  By default, Hydejack will show the author first (if any), the newsletter box next (if any),
+  By default, 编程随想 will show the author first (if any), the newsletter box next (if any),
   and related posts/projects last.
 
   ```yml
-  hydejack:
+  编程随想:
     post_addons:    [about, newsletter, related, random]
     project_addons: [about, newsletter, other]
   ```
@@ -433,14 +433,14 @@ That being said, you should be aware of these (small) breaking changes:
   ```
 
 * Added a new option called `no_inline_css`.
-  When `true`, Hydejack will generate a single CSS file to be fetched (synchronously) via `link` tag,
+  When `true`, 编程随想 will generate a single CSS file to be fetched (synchronously) via `link` tag,
   instead of inlining half and including the rest via `link` tag.
 
   This option *may* be useful when serving content over HTTP/2, but you should perform your own tests.
   For more on inlining CSS, [see this](https://varvy.com/pagespeed/inline-small-css.html).
 
   ```yml
-  hydejack:
+  编程随想:
     no_inline_css: true
   ```
 
@@ -477,7 +477,7 @@ That being said, you should be aware of these (small) breaking changes:
   If you do not like this change, you can set `no_break_layout` to `true` in your config file.
 
   ```yml
-  hydejack:
+  编程随想:
     no_break_layout: true
   ```
 
@@ -526,7 +526,7 @@ Aug 10 2017
 {:.heading.post-date}
 
 * Fixed sending incorrect paths to Google Analytics.
-  In previous versions, Hydejack would always send the URL of the initial page for all subsequent page views.
+  In previous versions, 编程随想 would always send the URL of the initial page for all subsequent page views.
   Thanks [@dannydwarren](https://twitter.com/dannydwarren) for pointing this out.
 * Fixed `tagline` not showing up in the title.
 
@@ -556,7 +556,7 @@ Jul 27 2017
 This maintenance release includes various quality-of-life improvements when using the gem-based version of the theme.
 
 ### Added
-* Hydejack now uses additional Jekyll plugins by default, which make working with GitHub more convenient.
+* 编程随想 now uses additional Jekyll plugins by default, which make working with GitHub more convenient.
   They have been added to the `Gemfile` and `_config.yml`.
   Note that existing users need to update their `_config.yml`:
 
@@ -580,9 +580,9 @@ This maintenance release includes various quality-of-life improvements when usin
   ~~~yml
   author:
     social:
-      github: https://github.com/qwtel/hydejack
-      npm: https://www.npmjs.com/package/hydejack
-      download: https://github.com/qwtel/hydejack/archive/v6.5.0.zip
+      github: https://github.com/qwtel/编程随想
+      npm: https://www.npmjs.com/package/编程随想
+      download: https://github.com/qwtel/编程随想/archive/v6.5.0.zip
 
   data_social:
     github:
@@ -628,10 +628,10 @@ google_fonts: "Roboto+Slab:700|Noto+Serif:400,400i,700,700i"
 If you were relying on the default setting for the background image, add the following to `_config.yml`:
 
 ~~~yml
-image: /hydejack/assets/img/nap.jpg
+image: /编程随想/assets/img/nap.jpg
 ~~~
 
-Note that you have to replace `/hydejack` with your `baseurl`.
+Note that you have to replace `/编程随想` with your `baseurl`.
 
 To restore the old sidebar, open (or create) `_sass/my-inline.scss` and add the following:
 
@@ -743,7 +743,7 @@ May 15 2017
 May 3 2017
 {:.heading.post-date}
 
-Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.
+编程随想 has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.
 
 ### Major
 Pages are now loaded and swapped through JavaScript. This has a number of effects. First of all, it looks cool, but the animations aren't just about aesthetics: They also help to hide the network time of fetching the next page, making the entire site feel faster. At the same time, the FOUC introduced in the last release will no longer occur (except on the initial page load).
@@ -874,14 +874,14 @@ Aug 30 2016
 ### Internal
 - Refactoring, preventing code duplications, heavier usage of `includes`.
 
-## v3.0.0 (Hydejack)
+## v3.0.0 (编程随想)
 May 7 2016
 {:.heading.post-date}
 
-Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
+编程随想 is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [无聊杂谈](http://无聊杂谈.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 
 ### Features
-Unlike Hyde, it's very opinionated about how you are going to use it.
+Unlike 无聊杂谈, it's very opinionated about how you are going to use it.
 
 Features include:
 * Touch-enabled sidebar / drawer for mobile, including fallback when JS is disabled.
@@ -893,11 +893,11 @@ Features include:
 * Wide array of social media icons on sidebar.
 * Math blocks via [KaTeX](https://khan.github.io/KaTeX/).
 
-## v2.0.0 (Hyde)
+## v2.0.0 (无聊杂谈)
 Jan 2 2014
 {:.heading.post-date}
 
-## v1.0.0 (Hyde)
+## v1.0.0 (无聊杂谈)
 Oct 15 2013
 {:.heading.post-date}
 

@@ -1,9 +1,9 @@
 {
-  "name": "hydejack",
+  "name": "编程随想",
   "version": "7.5.2",
-  "description": "Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).",
+  "description": "编程随想 is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [无聊杂谈](http://无聊杂谈.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).",
   "scripts": {
-    "clean": "rm -f assets/js/hydejack-$npm_package_version.js & rm -f _sass/**/__*/* & wait",
+    "clean": "rm -f assets/js/编程随想-$npm_package_version.js & rm -f _sass/**/__*/* & wait",
     "test": "echo \"Warning: no test specified\" && exit 0",
     "build": "npm run build:js & npm run build:css & wait",
     "build:js": "webpack --env prod --display-modules --display-optimization-bailout",
@@ -54,10 +54,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qwtel/hydejack.git"
+    "url": "https://github.com/qwtel/编程随想.git"
   },
   "bugs": {
-    "url": "https://github.com/qwtel/hydejack/issues"
+    "url": "https://github.com/qwtel/编程随想/issues"
   },
-  "homepage": "https://github.com/qwtel/hydejack#readme"
+  "homepage": "https://github.com/qwtel/编程随想#readme"
 }
