@@ -1,94 +1,39 @@
 ---
-layout: default
+# Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+layout: base
 ---
-<article class="post container">
-  
-  <!-- 定义日期和标签容器 -->
-  <div class="post-meta">
-    <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
-    {% if page.tags.size > 0 %}
-    <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
-    {% endif %}
-    
-    <!-- 阅读量统计和中英文文字数统计 -->
-    <span class="post-meta-span read" "id="busuanzi_container_page_pv">
-      Read <span id="busuanzi_value_page_pv">  </span>
-    </span>    
-    <span class="post-meta-span number" number>  
-      Number <span>{{ page.content | number_of_words }} </span>
-    </span>   
-    <span class="post-meta-span size">
-      Words <span>{{ content | strip_html | strip_newlines | split: "" | size }} </span>
-    </span>                                                
-  </div>
-                                                                                                                           
-  <!-- 文章标题格式，这就是md文件里的一级标题显示不出来的原因 -->
-  <h1 class="post-title">{{ page.title }}</h1>   
-  
-  <!-- 归档 -->
-  <span class="post-meta-span archives">
-    <a href="https://ds19991999.github.io/archives/" target="_blank">Archives</a>
-  </span>  
-                                                                  
-  <span class="post-meta-span tags">
-    <a href="https://ds19991999.github.io/tags/" target="_blank">Tags</a>
-  </span> 
-                                                                
-  <!-- 站内搜索引擎 -->
-  <span class="post-meta-span Search">
-    <a href="https://ds19991999.github.io/search-engine" target="_blank">Search</a>
-  </span> 
- 
-  <!-- 在线编辑 -->
-  <span class="post-meta-span edit">
-    <a href="http://markdown.xiaoshujiang.com/" target="_blank">Edit</a>
-  </span> 
-  <!-- 歌单 -->
-  <span class="post-meta-span music">
-    <a href="https://ds19991999.github.io/test/music" target="_blank">Music</a>
-  </span>        
-  
-  <!-- 显示访问数据,统计中文字数 -->
-  <!-- 
-  <span id="busuanzi_container_page_pv">
-    阅读 <span id="busuanzi_value_page_pv"></span>
-  </span>
-  -->
-  <!-- 添加英文字数统计功能 -->
-  <!-- {{ page.content | number_of_words }} -->
-  <!-- 添加中文字数统计 -->
-  <!-- {{ content | strip_html | strip_newlines | split: "" | size }}-->
-  
-  <!-- 在正文开头添加网易云音乐插件 -->
-  {% if page.music-id %}
-    <br>
-    {% include cloud-music.html %}
-  {% endif %} 
-  
-  <!-- 正文部分 -->      
-  {{ content }} 
-                                                           
-  <!-- 添加Star和Fork Button -->
-  <iframe src="https://ghbtns.com/github-btn.html?user=ds19991999&repo=ds19991999.github.io&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-  <iframe src="https://ghbtns.com/github-btn.html?user=ds19991999&repo=ds19991999.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-                                                           
-  <!-- 增加打赏和分享功能 -->
-  {% include share.html %}
-  <!--  include dashang.html  -->
-  <hr />     
 
-  <!-- 正文结束加评论功能，需要刷新网站才能显示 -->
-  {% if site.intensedebate_comments %}
-    {% include intensedebate-comments.html %}
-  {% endif %}                                                           
-</article>
+{% include post.html post=page link_title=false %}
 
-<!-- 网页尾部的分享部分,现在可以不用了注释掉 -->                                                          
-<div class="post-share">
-  <div class="container">
-    <a href="https://twitter.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&text={{ page.title }}" target="_blank" class="post-share-icon twitter"></a>
-    <a href="http://service.weibo.com/share/share.php?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&title={{ page.title }}" target="_blank" class="post-share-icon weibo"></a>
+<hr class="dingbat related" />
 
-  </div>
-  
-</div> 
+{% assign addons = site.hydejack.post_addons %}
+{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include about.html %}
+  {% when 'related' %}
+    {% include related-posts.html post=post %}
+  {% else %}
+  {% endcase %}
+{% endfor %}
