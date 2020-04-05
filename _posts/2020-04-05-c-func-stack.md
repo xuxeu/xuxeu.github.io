@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C函数栈层次分析
-date: 2020-04-03
+date: 2020-04-05
 Author: xuxeu
 categories: 
 tags: [编程杂谈]
@@ -23,7 +23,7 @@ comments: true
 现在我们将0x50压入栈中：
 
 push $0x50    //将0x50的压入栈
-![push](../images/2020-04-05-c-func-stack/push.png）
+![push](/images/2020-04-05-c-func-stack/push.png）
 
 push
 我们再来看看pop操作的例子：
