@@ -199,11 +199,11 @@ I get 10 times more traffic from [Google](http://google.com/ "Google") than from
 如果直接以链接地址作为链接文本，可以用如下快捷写法：
 
 ```
-<http://www.shengbin.me> 效果：
+[无敌大灰狼me](https://www.jianshu.com/u/e48caea06934) 效果：
 
 ```
 
-[http://www.shengbin.me](http://www.shengbin.me/)
+[无敌大灰狼me](https://www.jianshu.com/u/e48caea06934)
 
 ### 强调
 
