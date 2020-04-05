@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Markdown语法简介
-date: 2013-07-16
+date: 2020-04-05
 Author: Shengbin
 categories: 
-tags: [sample, markdown]
+tags: [markdown]
 comments: true
 ---
 
