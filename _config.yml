@@ -38,15 +38,15 @@ paginate: 8
 footer-links: 
   weibo: #frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<>
-  dribbble: # https://dribbble.com/<>
+  dribbble: u/e48caea06934 # https://dribbble.com/<>
   email: 1195628909@qq.com 
   facebook: #https://www.facebook.com/<>
   flickr: #https://www.flickr.com/<>
-  github: https://github.com/xuxeu
+  github: xuxeu
   instagram: #https://instagram.com/<>
   linkedin: #https://www.linkedin.com/in/<>
   pinterest: #https://www.pinterest.com/<>
-  rss: https://www.jianshu.com/u/e48caea06934
+  rss: #
   stackoverflow: # http://stackoverflow.com/<>
   tumblr: # https://<username>.tumblr.com
   twitter: # https://www.twitter.com/<your_twitter_username> 
