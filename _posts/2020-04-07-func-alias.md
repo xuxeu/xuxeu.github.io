@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 函数别名alias
-date: 2020-04-08
+date: 2020-04-07
 Author: xuxeu
 categories: 
 tags: [编程杂谈]
