@@ -9,7 +9,7 @@ comments: true
 typora-root-url: ..
 ---
 
-##摘要
+## 摘要
 以构建mips嵌入式交叉编译工具mipself-*为例，详细说明了如何在Linux系统下使用newlib库创建灵活配置的嵌入式交叉编译工具的通用方法。该方法具有速度快方便移植的特点，可以用于创建arm，ppc以及mips64交叉编译工具！
 ##引言
 随着嵌入式电子产品的大量应用以及Linux操作系统的广泛使用，基于Linux操作系统的嵌入式开发环境已经越来越多的企业、学校以及科研机构中使用。交叉编译器能够在一个平台上生成另一个平台上的可执行代码，它是嵌入式开发环境中必不可少的工具。
@@ -19,7 +19,7 @@ typora-root-url: ..
 1. 灵活性强，ARCH-elf-*是一个独立的编译体系，不依赖于指定的C语言库glibc，可以使用newlib等其他C语言库，不需要操作系统的支持，可移植到很多CPU结构上。
 2. 支持基于UCLinux的操作系统，且不需要MMU支持，编译出来的目标文件占空间相对要少。
 3. 速度比ARCH-linux-*要快。
-##编译前的准备
+## 编译前的准备
 ### cygwin环境的搭建
 
 cygwin是一个在Windows平台下运行的Unix模拟环境，是cygnus solutions公司开发的自由软件。他们写了一个共享库，也就是cygwin1.dll，把win32api中没有的Unix风格的调用封装在里面。
@@ -48,7 +48,7 @@ cygwin的安装教程很多，需要注意的一点是，当我们选择一个do
 
 
 
-###源代码准备
+### 源代码准备
 
 宿主机是用来开发和调试嵌入式系统应用程序的计算机系统。宿主机硬件可以用PC机，配置linux操作系统。
 Linux下的交叉编译环境主要包括以下几个重要部分：
@@ -60,16 +60,16 @@ Linux下的交叉编译环境主要包括以下几个重要部分：
 5. 用于生成目标系统的编译器gcc源代码，mpfr，gmp，mpc
 6. newlib源代码
 7. make工具以及linux内核头文件
-###准备build目录和安装目录
+### 准备build目录和安装目录
 首先，将下载的源代码放于/home/me/gnuu下并解压源代码文件，解压后会生成binutils，gcc，newlib。然后建立相关目录。
 
 ![1](/images/2020-04-15-mips-build-tools/1.png)
 
-##构建过程
-###生成目标二进制工具
+## 构建过程
+### 生成目标二进制工具
 目标系统的二进制工具binutils是通过对源码binutils--2.32进行编译和安装而生成。生成的目标系统二进制工具，如ld、objdump等将安装到/home/me/gnuu中。
 
-####修改binutils源码
+#### 修改binutils源码
 Bfd目录下的config.bfd
 ![2](/images/2020-04-15-mips-build-tools/2.png)
 Gas目录下的configure
@@ -103,7 +103,7 @@ ABI是一系列约定的集合，例如GNU/Linux约定函数调用的头六个�
 - o32与n64即纯粹的32位与64位模式，二者除指针与变量类型的长度差异外，n64还用寄存器来传递更多的参数，性能有所提高。
 - n32则是32位数据结构和64位指令的结合体。MIPS N32 ABI在保留 MIPS N64 ABI 的几乎所有特性的情况下（主要是寄存器和堆栈中的函数参数传递约定），重点在于仅将long long与double类型编译为64位，其余指针与变量类型设定与o32相同（例如，指针和long int是32位的），因此更接近MIPS N64 ABI。
 
-####在binbuild目录下执行
+#### 在binbuild目录下执行
 
 ```cmake
 sudo ../binutils-2.32/configure --prefix=/home/me/gnuu/bininstall --target=mips-loongson-elf  --disable-nls --disable-werror --enable-shared --enable-threads=posix --enable-interwork --enable-multilib --enable-languages=c,c++,fortran
@@ -137,14 +137,14 @@ make install
 target选项用来指定目标板的类型。由于本次编译采用了newlib，且生成的编译器可以独立运行，不需要linux系统支持，因此，目标板的类型设置为mips-elf。如果需要构建其它类型的目标板，只需要用其它目标类型替换mips即可，如arm、ppc等。Prefix选项用来指定安装目录。完成安装后在/home/me/gnuu/bininstall/bin生成如下二进制工具：
 ![6](/images/2020-04-15-mips-build-tools/6.png)
 
-###生成静态库编译器
+### 生成静态库编译器
 静态库编译器也称自举编译器bootstrap compiler。因为这时并没有mips的C语言库可使用，所以只能先生成一个简单的mips-elf-gcc编译器，该编译器只支持C语言的编译。用该静态编译器对C语言库进行编译后，再重新对编译器进行编译，从而生成完整的交叉编译工具。
-####编译依赖库
+#### 编译依赖库
 编译gcc期间可能会存在软件的依赖，因此需提前下载好gmp，mpfr，mpc库，下载方法非常简单。在/home/me/gnuu/gcc-7.4.0/contrib中，存在download_prerequisites这个脚本文件，执行它，会自动安装相关依赖库。
 
 ![依赖](/images/2020-04-15-mips-build-tools/依赖.bmp)
 
-####在gccbuild目录下执行
+#### 在gccbuild目录下执行
 ```
 sudo ../gcc-7.4.0/configure --target=mips-loongson-elf --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --disable-hosted-libstdcxx --enable-version-specific-runtime-libs --disable-sjlj-exceptions --disable-symvers --enable-__cxa_atexit --disable-fixed-point --disable-decimal-float --enable-interwork --enable-multilib --with-gnu-as --with-gnu-ld  --with-newlib --enable-languages=c,c++ --enable-shared --disable-lto --disable-hosted-libstdcxx --prefix=/home/me/gnuu/gccinstall --with-gxx-include-dir=''\''/'\''include/c++/7.4' --disable-libgomp --disable-libitm --with-build-time-tools=/home/me/gnuu/bininstall/mips-loongson-elf/bin
 make all-gcc                 //编译静态gcc
@@ -152,16 +152,16 @@ make install-gcc              //安装静态gcc
 ```
 由于这里还没有对库文件进行编译，且对库文件编译时需要静态编译工具mips-elf-gcc；因此需要对gcc进行编译时可以不用with-header的选项。但是，为了下步进行动态编译时不在重新配置gcc，这里将动态配置时的选项增加进来。其中，with-header指定的头文件是newlib标准库中的头文件，而不再使用基于linux的C标准库文件。Enable-language选项用于指定生成的交叉编译工具对C和C++编程语言的支持。完成安装后在/home/me/gnuu/gccinstall/bin中：
 ![7](/images/2020-04-15-mips-build-tools/7.png)
-###利用静态编译工具编译嵌入式库文件
+### 利用静态编译工具编译嵌入式库文件
 本文主要采用newlib库取代glibc库，从而生成一个不依赖于linux操作系统的灵活、方便的编译器，对newlib的编译主要是使用静态编译器对newlib进行编译，从而生成支持交叉编译器的动态链接库：
 ```
 sudo ../newlib-3.1.0/configure --prefix=/home/me/gnuu/newinstall --target=mips-loongson-elf  --disable-nls --disable-werror --enable-shared --enable-threads=posix --enable-interwork --enable-multilib --enable-languages=c,c++,fortran
 make
 make install
 ```
-###生成交叉编译工具链
+### 生成交叉编译工具链
 在生成静态gcc时，已经添加了所有用到的选项，如使用newlib中的头文件。生成对C和C++支持编译器等。因此，只需要对gcc直接进行编译即可，无需重新配置各编译选项。该步骤完成后，会在install目录下生成完整的嵌入式交叉编译工具。
-##验证工作
+## 验证工作
 生成好改交叉编译链以后，我们使用它来验证其正确性：
 ```
 ./mips-loongson-elf-gcc -EL -mabi=64 -c test.c -o test.o
@@ -193,7 +193,7 @@ OUTPUT_ARCH(mips)
 ENTRY(__start)
 用以指定输出的elf格式和体系结构，以及起始函数。
 
-##结束语
+## 结束语
 
 通过ARCH-elf-*搭建跨平台mips开发工具链的实例，说明了如何使用newlib库构建灵活配置的嵌入式开发平台，从而使嵌入式开发人员可以直接在PC机上开发基于嵌入式结构的应用程序。
 当我们需要开发基于VxWorks库的嵌入式开发平台，可以以至进行参考。无非就是target变了，binutils里面的configure等文件做好相应更改就可以了。
