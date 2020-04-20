@@ -63,7 +63,7 @@ Linux下的交叉编译环境主要包括以下几个重要部分：
 ###准备build目录和安装目录
 首先，将下载的源代码放于/home/me/gnuu下并解压源代码文件，解压后会生成binutils，gcc，newlib。然后建立相关目录。
 
-![1](.\1.png)
+![1](/images/2020-04-15-mips-build-tools/1.png)
 
 ##构建过程
 ###生成目标二进制工具
