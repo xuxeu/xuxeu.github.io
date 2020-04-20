@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 基于龙芯64位的嵌入式交叉编译工具的构建
-date: 2020-04-12
+date: 2020-04-15
 Author: xuxeu
 categories: 
 tags: [编程杂谈]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: shell连接不上的解决方案
-date: 2020-04-12
+date: 2020-04-14
 Author: xuxeu
 categories: 
 tags: [编程杂谈]
