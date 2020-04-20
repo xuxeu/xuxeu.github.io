@@ -9,7 +9,6 @@ comments: true
 typora-root-url: ..
 ---
 
-[TOC]
 ##摘要
 以构建mips嵌入式交叉编译工具mipself-*为例，详细说明了如何在Linux系统下使用newlib库创建灵活配置的嵌入式交叉编译工具的通用方法。该方法具有速度快方便移植的特点，可以用于创建arm，ppc以及mips64交叉编译工具！
 ##引言

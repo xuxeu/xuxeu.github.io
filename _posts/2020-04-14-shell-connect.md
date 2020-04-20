@@ -9,8 +9,6 @@ comments: true
 typora-root-url: ..
 ---
 
-[TOC]
-
 #### Shell连接不上原因分析
 
 shell连不上，网络却能正常ping通？为何？
