@@ -53,21 +53,21 @@ GCC使用AT&T/UNIX汇编语法。这里我们将使用AT&T汇编语法来codeing
 
    AT&T语法中操作数大小取决于操作码最后一个字符。操作码后缀`b`,`w`,`l` 对应 byte(8-bit),  word(16-bit), 和 long(32-bit)。Intel语法中，通过在操作数（非操作码）前缀 `byte ptr`, `word ptr`, 和 `dword ptr` 实现该功能。
 
-   *Thus, Intel "mov al, byte ptr foo" is "movb foo, %al" in AT&T syntax.*
+   Thus, Intel "mov al, byte ptr foo" is "movb foo, %al" in AT&T syntax.
 
 5. *Memory Operands.*
 
    内存操作数
 
-   *In Intel syntax the base register is enclosed in ’[’ and ’]’ where as in AT&T they change to ’(’ and ’)’. Additionally, in Intel syntax an indirect memory reference is like*
+   In Intel syntax the base register is enclosed in ’[’ and ’]’ where as in AT&T they change to ’(’ and ’)’. Additionally, in Intel syntax an indirect memory reference is like
 
    ntel语法中基址寄存器（The base register）内于`[`、`]`之间，而AT&T于`(`、`)` 之间。此外，间接内存引用（indirect memory reference）。
 
-   *section:[base + index*scale + disp] in Intel*
+   *section:[base + index*scale + disp] in Intel
 
-   *section:disp(base, index, scale) in AT&T.*
+   section:disp(base, index, scale) in AT&T.
 
-   *One point to bear in mind is that, when a constant is used for disp/scale, ’$’ shouldn’t be prefixed.*
+   One point to bear in mind is that, when a constant is used for disp/scale, ’$’ shouldn’t be prefixed.
 
    需指出，当常量使用disp/scale，`$` 无需前置。
 
