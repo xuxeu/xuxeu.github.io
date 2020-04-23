@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gcc内联汇编-howto-0
+title: gcc内联汇编-howto-概述
 date: 2020-04-22
 Author: xuxeu
 categories: 

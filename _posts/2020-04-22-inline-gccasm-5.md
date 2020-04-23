@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gcc内联汇编-howto-5
+title: gcc内联汇编-howto-Volatile
 date: 2020-04-22
 Author: xuxeu
 categories: 
@@ -15,7 +15,7 @@ typora-root-url: ..
 
 Some instructions clobber some hardware registers. We have to list those registers in the clobber-list, ie the field after the third ’**:**’ in the asm function. This is to inform gcc that we will use and modify them ourselves. So gcc will not assume that the values it loads into these registers will be valid. We shoudn’t list the input and output registers in this list. Because, gcc knows that "asm" uses them (because they are specified explicitly as constraints). If the instructions use any other registers, implicitly or explicitly (and the registers are not present either in input or in the output constraint list), then those registers have to be specified in the clobbered list.
 
-一些指令会影响一些硬件寄存器。我们必须在受影响列表中列出那些寄存器，即`asm`函数第三个`:`后的区域。这用于指示gcc我们将使用并修改它们。所以gcc将不会假设它加载到这些寄存器中的值是合法的。我们不应该再受影响列表中列出输入和输出寄存器。因为gcc知道`asm`使用它们（因为它们被明确指定为限制符(constraints)）。**如果指令使用了任何其他寄存器，显式或隐式的（并且这些寄存器没有出现在输入和输出列表上），那么那些寄存器必须在受影响列表中指定**。
+一些指令会影响一些硬件寄存器。我们必须在受影响列表中列出那些寄存器，即`asm`函数第三个`:`后的区域。这用于指示gcc我们将使用并修改它们。所以gcc将不会假设它加载到这些寄存器中的值是合法的。**我们不应该在受影响列表中列出输入和输出寄存器**。因为gcc知道`asm`使用它们（因为它们被明确指定为限制符(constraints)）。**如果指令使用了任何其他寄存器，显式或隐式的（并且这些寄存器没有出现在输入和输出列表上），那么那些寄存器必须在受影响列表中指定**。
 
 If our instruction can alter the condition code register, we have to add "cc" to the list of clobbered registers.
 

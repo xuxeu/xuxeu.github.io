@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gcc内联汇编-howto-4
+title: gcc内联汇编-howto-操作数
 date: 2020-04-22
 Author: xuxeu
 categories: 
@@ -15,7 +15,7 @@ typora-root-url: ..
 
 The assembler template contains the set of assembly instructions that gets inserted inside the C program. The format is like: either each instruction should be enclosed within double quotes, or the entire group of instructions should be within double quotes. Each instruction should also end with a delimiter. The valid delimiters are newline(\n) and semicolon(;). ’\n’ may be followed by a tab(\t). We know the reason of newline/tab, right?. Operands corresponding to the C expressions are represented by %0, %1 ... etc.
 
-汇编模板包含一组嵌入到C程序中的指令。格式类似：或者每个指令包围在双引号中，或整组指令包含在双引号中。每个指令也应该以一个分隔符结束。合法的分隔符可以是`\n`和`;`。`\n`可以跟随一个`\t`。C表达式的操作数呈现为 `%0`, `%1` ...等。
+汇编模板包含一组嵌入到C程序中的指令。格式类似：**或者每个指令包围在双引号中，或整组指令包含在双引号中**。每个指令也应该以一个分隔符结束。**合法的分隔符可以是`\n`和`;`。**`\n`可以跟随一个`\t`。C表达式的操作数呈现为 `%0`, `%1` ...等。
 
 #### 5.2 操作数
 
@@ -25,7 +25,7 @@ c表达式作为内联汇编指令的操作数。每个操作数首先写一个�
 
 "constraint" (C expression) is the general form. For output operands an additional modifier will be there. Constraints are primarily used to decide the addressing modes for operands. They are also used in specifying the registers to be used.
 
-`"constraint" (C expression)` 乃通用形式。对输出操作数会有一个额外的修饰符。限制符（constraint）主要用于决定操作数的地址模式。他们也被用于指定要使用的寄存器。
+**`"constraint" (C expression)` **乃通用形式。对输出操作数会有一个额外的修饰符。限制符（constraint）主要用于决定操作数的地址模式。他们也被用于指定要使用的寄存器。
 
 If we use more than one operand, they are separated by comma.
 
@@ -33,7 +33,7 @@ If we use more than one operand, they are separated by comma.
 
 In the assembler template, each operand is referenced by numbers. Numbering is done as follows. If there are a total of n operands (both input and output inclusive), then the first output operand is numbered 0, continuing in increasing order, and the last input operand is numbered n-1. The maximum number of operands is as we saw in the previous section.
 
-在汇编模板中，每个操作数按数字被引用。数字按如下规则排列。如果有n个操作数（包括输入、输出），那么第一个输出操作数是数字`0`，连续增加，最后一个输入操作数是数字`n-1`。最大操作数数量如上一段所述。
+**在汇编模板中，每个操作数按数字被引用。数字按如下规则排列。如果有n个操作数（包括输入、输出），那么第一个输出操作数是数字`0`，连续增加，最后一个输入操作数是数字`n-1`。最大操作数数量如上一段所述**。
 
 Output operand expressions must be lvalues. The input operands are not restricted like this. They may be expressions. The extended asm feature is most often used for machine instructions the compiler itself does not know as existing ;-). If the output expression cannot be directly addressed (for example, it is a bit-field), our constraint must allow a register. In that case, GCC will use the register as the output of the asm, and then store that register contents into the output.
 
@@ -41,7 +41,7 @@ Output operand expressions must be lvalues. The input operands are not restricte
 
 As stated above, ordinary output operands must be write-only; GCC will assume that the values in these operands before the instruction are dead and need not be generated. Extended asm also supports input-output or read-write operands.
 
-如上所述，原始输出操作数必须是只写的；GCC将假设那个操作对象中的值在指令前已失效且无需生成。扩展汇编也支持“输入-输出”或“读-写”操作数。
+如上所述，**原始输出操作数必须是只写的**；GCC将假设那个操作对象中的值在指令前已失效且无需生成。扩展汇编也支持“输入-输出”或“读-写”操作数。
 
 So now we concentrate on some examples. We want to multiply a number by 5. For that we use the instruction `lea`.
 

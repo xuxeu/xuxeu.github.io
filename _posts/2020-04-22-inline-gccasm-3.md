@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gcc内联汇编-howto-3
+title: gcc内联汇编-howto-扩展asm
 date: 2020-04-22
 Author: xuxeu
 categories: 
@@ -52,9 +52,9 @@ Now, what does this code do? The above inline fills the `fill_value` `count` 
 ```c
 int a=10, b;
 asm ("movl %1, %%eax; movl %%eax, %0;"
-    :"=r"(b)        /* output /
-    :"r"(a)         / input /
-    :"%eax"         / clobbered register */
+    :"=r"(b)        /* output */
+    :"r"(a)         /* input */
+    :"%eax"         /* clobbered register */
     ); 
 ```
 
@@ -68,7 +68,7 @@ Here what we did is we made the value of ’b’ equal to that of ’a’ using 
 
 - "r" is a constraint on the operands. We’ll see constraints in detail later. For the time being, "r" says to GCC to use any register for storing the operands. output operand constraint should have a constraint modifier "=". And this modifier says that it is the output operand and is write-only.
 
-  `r` 是受到限制的操作数。此时, `r` 告诉 GCC 使用任意寄存器来储存操作数。输出操作数限制应该有一个限时修饰符`=`。这个修饰符意味着它是一个输出操作数且是只写的。
+  `r` 是操作数的限制符。此时, `r` 告诉 GCC 使用任意寄存器来储存操作数。输出操作数限制应该有一个限制修饰符`=`。这个修饰符意味着它是一个输出操作数且是只写的。
 
 - There are two %’s prefixed to the register name. This helps GCC to distinguish between the operands and registers. operands have a single % as prefix.
 

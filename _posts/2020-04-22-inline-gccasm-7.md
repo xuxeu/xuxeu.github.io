@@ -1,7 +1,7 @@
 ---
 layout: post
-title: gcc内联汇编-howto-7
-date: 2020-04-22
+title: gcc内联汇编-howto-限制符的修饰符
+date: 2020-04-23
 Author: xuxeu
 categories: 
 tags: [编程杂谈]

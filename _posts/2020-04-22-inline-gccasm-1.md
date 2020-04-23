@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gcc内联汇编-howto-1
+title: gcc内联汇编-howto-汇编语法
 date: 2020-04-22
 Author: xuxeu
 categories: 
@@ -61,7 +61,7 @@ GCC使用AT&T/UNIX汇编语法。这里我们将使用AT&T汇编语法来codeing
 
    In Intel syntax the base register is enclosed in ’[’ and ’]’ where as in AT&T they change to ’(’ and ’)’. Additionally, in Intel syntax an indirect memory reference is like
 
-   ntel语法中基址寄存器（The base register）内于`[`、`]`之间，而AT&T于`(`、`)` 之间。此外，间接内存引用（indirect memory reference）。
+   Intel语法中基址寄存器（The base register）内于`[`、`]`之间，而AT&T于`(`、`)` 之间。此外，间接内存引用（indirect memory reference）。
 
    *section:[base + index*scale + disp] in Intel
 

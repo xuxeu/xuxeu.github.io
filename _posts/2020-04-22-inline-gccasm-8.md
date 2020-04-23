@@ -1,7 +1,7 @@
 ---
 layout: post
-title: gcc内联汇编-howto-8
-date: 2020-04-22
+title: gcc内联汇编-howto-举个栗子
+date: 2020-04-23
 Author: xuxeu
 categories: 
 tags: [编程杂谈]
@@ -84,7 +84,7 @@ Points to note here are that：
 
    `cond`可以在`eax`,`ebx`,`ecx`和`edx`中的任意一个。
 
-3.  And we can see that memory is there in the clobber list. ie, the code is changing the contents of memory
+3. And we can see that memory is there in the clobber list. ie, the code is changing the contents of memory
 
    受影响列表中包含`memory`，即代码将改变内存中的值。
 

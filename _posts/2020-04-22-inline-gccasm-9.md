@@ -1,7 +1,7 @@
 ---
 layout: post
-title: gcc内联汇编-howto-9
-date: 2020-04-22
+title: gcc内联汇编-howto-栗子栗子
+date: 2020-04-23
 Author: xuxeu
 categories: 
 tags: [编程杂谈]
