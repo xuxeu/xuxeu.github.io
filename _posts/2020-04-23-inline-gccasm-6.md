@@ -4,7 +4,7 @@ title: gcc内联汇编-howto-限制符
 date: 2020-04-23
 Author: xuxeu
 categories: 
-tags: [编程杂谈]
+tags: [内联汇编]
 comments: true
 typora-root-url: ..
 ---

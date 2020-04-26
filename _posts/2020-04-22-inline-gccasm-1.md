@@ -4,7 +4,7 @@ title: gcc内联汇编-howto-汇编语法
 date: 2020-04-22
 Author: xuxeu
 categories: 
-tags: [编程杂谈]
+tags: [内联汇编]
 comments: true
 typora-root-url: ..
 ---
