@@ -14,23 +14,23 @@ comments: true
 >
 > 权当日记吧！
 
-## 1.操作系统
+#### 1.操作系统
 
 多看书多看报少吃零食多睡觉
 
-## 2.c
+#### 2.c
 
 I like C
 
-## 3.python
+#### 3.python
 
 that‘s nice
 
-## 4.doc
+#### 4.doc
 
 坚持写文章
 
-## 5.小尾巴
+#### 5.小尾巴
 
 出差必备：
 买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)
