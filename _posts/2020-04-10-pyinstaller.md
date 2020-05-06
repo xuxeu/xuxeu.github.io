@@ -39,16 +39,10 @@ typora-root-url: ..
    -D 创建一个目录，里面包含exe以及其他一些依赖性文件
 
    pyinstaller -h 查看参数
-
    ```
 
-   ​
+   注意：
 
-
-
-
-
-### 注意：
 
 *该脚本为Python3编写,想知道更多参数可查看pyinstaller -h*
 
