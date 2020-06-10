@@ -9,8 +9,6 @@ comments: true
 typora-root-url: ..
 ---
 
-> Hi, I'm Carrie Anne and welcome to Crash Course Computer Science!
-
 > 网络抓包，相信大家都会使用鼎鼎大名的wireshark，但是串口抓包呢？
 
 **portmon？ Device Monitoring Studio？ CommMonitor？**可是，当串口通信时，端口号会被占用啊，这样子，你们这些工具抓包时竟然还要指定端口号，我的天呀，⛏可能是我没有搞懂这些工具吧！
@@ -21,7 +19,7 @@ typora-root-url: ..
 
 ![1](/images/2020-06-10-uart-catch/1.png)
 
-安装好以后，需要重启电脑，然后就可以看到！
+安装好以后，需要**重启电脑**，然后就可以看到下图的USBPcap1！
 
 ![2](/images/2020-06-10-uart-catch/2.png)
 
