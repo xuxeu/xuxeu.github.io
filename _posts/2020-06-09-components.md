@@ -4,7 +4,7 @@ title: 配置组件的两种办法！
 date: 2020-06-09
 Author: xuxeu
 categories: 
-tags: [rtt]
+tags: [one]
 comments: true
 typora-root-url: ..
 ---
