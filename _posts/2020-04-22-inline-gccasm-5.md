@@ -62,7 +62,3 @@ If our assembly is just for doing some calculations and doesn’t have any side 
 In the section `Some Useful Recipes`, I have provided many examples for inline asm functions. There we can see the clobber-list in detail.
 
 在**“一些有用的代码”**小节，我已经提供了很多内联汇编函数的例子。我们可以详细了解受影响列表。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

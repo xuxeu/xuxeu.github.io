@@ -56,7 +56,3 @@ Now we are in a position to guess what is inline assembly. Its just some assembl
 Inline assembly is important primarily because of its ability to operate and make its output visible on C variables. Because of this capability, "asm" works as an interface between the assembly instructions and the "C" program that contains it.
 
 内联汇编很重要，因为有能力操作并输出到C变量中。因为这些能力，`asm`作为了C和汇编指令间的接口。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

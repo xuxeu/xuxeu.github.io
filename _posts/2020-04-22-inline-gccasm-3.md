@@ -85,7 +85,3 @@ When the execution of "asm" is complete, "b" will reflect the updated value, as 
 Now we may look each field in detail.
 
 现在我们详细的看一下每一个区域。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

@@ -79,7 +79,3 @@ asm ("leal (%%ecx,%%ecx,4), %%ecx"
 In all the three examples above, we didn’t put any register to the clobber list. why? In the first two examples, GCC decides the registers and it knows what changes happen. In the last one, we don’t have to put `ecx` on the c lobberlist, gcc knows it goes into x. Therefore, since it can know the value of `ecx`, it isn’t considered clobbered.
 
 以上三个例子中，我们没有把任何一个寄存器放在受影响列表中。为什么？前两个例子中，GCC决定使用哪个寄存器，因此知道发生了什么改变。在最后一个中，我们不需要将`ecx`放在受影响列表中，gcc知道它会放入x中。因为它可以知道`ecx`的值，它不会被视为受影响的。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

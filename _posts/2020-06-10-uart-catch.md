@@ -24,7 +24,3 @@ typora-root-url: ..
 ![2](/images/2020-06-10-uart-catch/2.png)
 
 双击**USBPcap1**，oh yeah，抓包成功！剩下的就是分析包了。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

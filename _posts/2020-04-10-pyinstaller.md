@@ -45,11 +45,3 @@ typora-root-url: ..
 
 
 *该脚本为Python3编写,想知道更多参数可查看pyinstaller -h*
-
-### 小尾巴
-
-出差必备：
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)
-
-优惠购物：
-你还在傻傻的原价淘宝吗？来这里领取内部优惠券，折扣力度非常大！[点击注册](http://url.cn/5KRkJq6)，注册需要邀请码UWD9Q9E。

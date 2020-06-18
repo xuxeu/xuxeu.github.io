@@ -152,5 +152,3 @@ memcpy 先复制一个一个的双字，到最后如果还有没复制完的（�
 #### 小小tips
 
 [gcc 内联汇编 HOWTO 文档](http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html)
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

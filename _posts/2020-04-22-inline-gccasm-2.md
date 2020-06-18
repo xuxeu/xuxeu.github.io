@@ -42,7 +42,3 @@ __asm__ ("movl %eax, %ebx\n\t"
 *If in our code we touch (ie, change the contents) some registers and return from asm without fixing those changes, something bad is going to happen. This is because GCC have no idea about the changes in the register contents and this leads us to trouble, especially when compiler makes some optimizations. It will suppose that some register contains the value of some variable that we might have changed without informing GCC, and it continues like nothing happened. What we can do is either use those instructions having no side effects or fix things when we quit or wait for something to crash. This is where we want some extended functionality. Extended asm provides us with that functionality.*
 
 如果我们的代码触及（touch）（如，改变内容）一些寄存器，而后不修复这些改变直接从asm返回的话，一些不好的事就会发生。这是因为GCC不知道对寄存器内容的改变，而这将我们带向问题，特别是当编译器进行了某些优化的时候。它将假设一些寄存器包含了一些变量的值，而我们已经改变了没有告知GCC， 然后它继续执行就像什么也没发生一样。我们可以做的是使用一些没有副作用的指令，或者在我们退出前修复问题，或者等待崩溃。这就是我们想要一些扩展功能性（functionality）的地方。**扩展asm（Extended asm）提供了我们这种功能性**。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

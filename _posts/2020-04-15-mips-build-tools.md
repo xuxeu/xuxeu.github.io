@@ -197,7 +197,3 @@ ENTRY(__start)
 
 通过ARCH-elf-*搭建跨平台mips开发工具链的实例，说明了如何使用newlib库构建灵活配置的嵌入式开发平台，从而使嵌入式开发人员可以直接在PC机上开发基于嵌入式结构的应用程序。
 当我们需要开发基于VxWorks库的嵌入式开发平台，可以以至进行参考。无非就是target变了，binutils里面的configure等文件做好相应更改就可以了。
-
-**出差必备:**
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

@@ -75,7 +75,3 @@ make (e=234): 有更多数据可用。
 #### 参考
 
 [微软官方给出的解决方案](https://support.microsoft.com/en-us/kb/830473)
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

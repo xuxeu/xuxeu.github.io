@@ -87,7 +87,3 @@ GCC使用AT&T/UNIX汇编语法。这里我们将使用AT&T汇编语法来codeing
 | add     eax,[ebx+ecx*2h]     | addl    (%ebx,%ecx,0x2),%eax      |
 | lea     eax,[ebx+ecx]        | leal    (%ebx,%ecx),%eax          |
 | sub     eax,[ebx+ecx*4h-20h] | subl    -0x20(%ebx,%ecx,0x4),%eax |
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

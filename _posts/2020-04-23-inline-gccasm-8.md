@@ -87,7 +87,3 @@ Points to note here are that：
 3. And we can see that memory is there in the clobber list. ie, the code is changing the contents of memory
 
    受影响列表中包含`memory`，即代码将改变内存中的值。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

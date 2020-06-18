@@ -91,13 +91,3 @@ __syscall_return(type,__res); \
 退出数字是`1`，参数（parameter）是`0`。所以我们安排`eax`包含1，`ebx`包含`0`，通过`int $0x80`执行`exit(0)`。这就是exit的工作原理。
 
 
-
-
-
-
-
-
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

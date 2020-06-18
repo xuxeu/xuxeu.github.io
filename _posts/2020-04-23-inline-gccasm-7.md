@@ -28,7 +28,3 @@ While using constraints, for more precise control over the effects of constraint
 The list and explanation of constraints is by no means complete. Examples can give a better understanding of the use and usage of inline asm. In the next section we’ll see some examples, there we’ll find more about clobber-lists and constraints.
 
 关于限制符的描述并不意味结束。例子可以帮助我们更好地理解内联汇编。下一节我们会看一些例子，我们会发现更多关于受影响列表和限制符的使用。
-
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)

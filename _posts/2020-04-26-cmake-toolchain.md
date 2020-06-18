@@ -82,6 +82,3 @@ add_link_options(-EL)
 
    添加链接参数
 
-#### 出差必备
-
-买火车票、高铁票、机票，订酒店都打9折的出行工具TRIP,[点击注册](https://h5.itrip.world/#/register/6tpd1Z)
