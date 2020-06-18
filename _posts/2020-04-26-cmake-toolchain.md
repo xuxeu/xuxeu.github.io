@@ -4,7 +4,7 @@ title: cmake交叉编译参数toolchain
 date: 2020-04-26
 Author: xuxeu
 categories: 
-tags: [编程杂谈]
+tags: [build]
 comments: true
 typora-root-url: ..
 ---
