@@ -13,8 +13,6 @@ typora-root-url: ..
 
 上篇文章有写过，如何在bsp下搭积木式配置，以及编译构建~，此次主要说说如果要生成keil工程或者iar工程，我们的逻辑在哪里。
 
-![1](/images/2020-07-01-keil-uvprojx/1.png)
-
 **如何生成工程文件？**
 
 ```
@@ -26,6 +24,8 @@ scons --target=mdk5
 **生成工程文件的原理？**
 
 python脚本通过`template.uvoptx`、`template.uvprojx`作为输入，`project.uvprojx`等作为输出。其实也很好理解，`template`嘛，模板的意思呀！
+
+![1](/images/2020-07-01-keil-uvprojx/1.png)
 
 **工程文件的意义？**
 
