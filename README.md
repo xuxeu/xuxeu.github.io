@@ -1,8 +1,9 @@
 ## 致谢
 
 * [Jekyll](https://github.com/jekyll/jekyll) - 这是本站存在的根基
-* [Kiko-now](https://github.com/aweekj/kiko-now) - 本jekyll是基于此汉化而来
-* [Font Awesome](https://fontawesome.com/) - 社交网络图标来自FontAwesome的免费开源内容
+* [gitee](https://gitee.com/xuxeu) - 这是gitee账号
+* [github](https://github.com/xuxeu) - 这是github账号
+* [个人博客](https://xuxeu.gitee.io/) - 这是基于gitee的个人博客
 
 
 
